@@ -4,6 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.2.2"
 gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'rspec-rails'
+gem 'bootstrap'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'jquery-rails', '~> 4.6'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
 
