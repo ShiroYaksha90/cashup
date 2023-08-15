@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'pages#home'
   get 'pages/home', to: 'pages#home'
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show] do
+    resources :groups
+    resources :entities
+  end
 end
