@@ -8,6 +8,7 @@ gem 'jquery-rails', '~> 4.6'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'rspec-rails'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'cancancan'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.6'
 
