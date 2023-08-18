@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playball&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  list-style-type: none;
+}
+
+body {
+  background-color: #f2f4f6;
+  color: #434b64;
+}
+
+#logo {
+  font-size: 4em;
+  font-family: 'Playball', cursive;
+  letter-spacing: 3px;
+  color: #434b64;
+  text-align: center;
+  margin-bottom: 25%;
+}
+
+.bg-main {
+  background-color: #3778c2;
+}
+
+.left-arrow {
+  background-color: transparent;
+  filter: invert(100%);
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  gap: 13px;
+}
+
+.btn-bg {
+  background-color: #5fb532;
+}
+
+.log-in{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.splash{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new_user {
+  display: flex;
+  gap: 11px;
+  flex-direction: column;
+  width: 30%;
+}
+
+.actions .btn-bg {
+  width: 100%;
+}
+
+.action {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  font-weight: normal;
+}
+
+.button_to {
+  width: 50%;
+}
+
+.button_to .btn {
+  width: 100%;
+}
+
+.splash-login form {
+  display: flex;
+  gap: 11px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.log-in input {
+  width: 95%;
+  outline: none;
+  border: none;
+  padding: 12px 0;
+  background-color: inherit;
+}
+
+.log-in input[type="email"],
+.log-in input[type="text"],
+.log-in input[name="user[password]"] {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.log-in input::placeholder {
+  opacity: 0.7;
+  // padding: 0 5px;
+}
+
+p.notice {
+  margin: 0;
+}
+
+p.alert {
+  margin: 0;
+  padding: 0;
+}
+
+#forgot a{
+  display: block;
+  text-align: center;
+  color: rgb(181, 180, 180);
+  text-decoration: none;
+  font-size: 18px;
+}
