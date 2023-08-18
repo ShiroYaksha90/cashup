@@ -1,0 +1,16 @@
+<%= form_with(model: entity, url: user_entities_path) do |form| %>
+<div class = 'container form'>
+    <div class="field">
+      <%= form.text_field :name, required:true, placeholder: 'Name'%>
+    </div>
+
+      <%= form.number_field :amount, step: "0.25", required:true, placeholder: 'Amount' %>
+
+  <h4>Select Categories</h4>
+
+    <%= form.select :group_ids,  @groups.map { |group| [group.name, group.id] }, { include_blank: false }, { multiple: true, required: true } %>
+  <%= form.hidden_field :group_id, value: params[:group_id] %>
+
+    <%= form.submit 'Create Transaction', class: 'btn btn-bg item' %>
+  </div>
+<% end %>
