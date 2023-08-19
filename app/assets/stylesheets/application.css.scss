@@ -38,7 +38,7 @@ body {
   margin-bottom: 25%;
 }
 
-p-2 {
+.p-2 {
   padding: 1.5rem !important;
 }
 
@@ -140,6 +140,15 @@ p.alert {
   padding: 0;
 }
 
+.add-category-btn a {
+  background-color: #5fb532;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 10px;
+  padding: 10px;
+  align-self: center;
+}
+
 #forgot a {
   display: block;
   text-align: center;
@@ -153,15 +162,6 @@ p.alert {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.add-category-btn a {
-  background-color: #5fb532;
-  color: #fff;
-  border: 1px solid #fff;
-  margin: 10px;
-  padding: 10px;
-  align-self: center;
 }
 
 #groups ul {
