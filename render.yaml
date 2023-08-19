@@ -1,18 +1,18 @@
 databases:
-  - name: postgres
-    databaseName: postgres
-    user: postgres
+  - name: cashup
+    databaseName: cashup
+    user: cashup_user
 
 services:
   - type: web
-    name: postgres
+    name: cashup
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: postgres
+          name: cashup
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
