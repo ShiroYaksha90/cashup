@@ -1,10 +1,7 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-
     can :manage, Group, author_id: user.id
     can :manage, Entity, author_id: user.id
     # can :destroy, Group, author_id: user.id

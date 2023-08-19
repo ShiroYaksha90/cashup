@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-    before_action :set_group, only: %i[show edit update destroy]
+  before_action :set_group, only: %i[show edit update destroy]
 
   def index
     @groups = Group.where(author_id: current_user.id).order(created_at: :desc) || []
