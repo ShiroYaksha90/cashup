@@ -1,7 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe 'Groups', type: :request do
-  describe 'GET /index' do
-    pending "add some examples (or delete) #{__FILE__}"
+  include Devise::Test::IntegrationHelpers
+
+  describe 'GET /new' do
+    before do
+      @user = User.create(name: 'Basim', email: 'aljazaeribasim@gmail.com', password: '123123',
+                          password_confirmation: '123123')
+      sign_in @user
+      get user_path
+    end
+
+    it 'response to html' do
+      expect(response.content_type).to include 'text/html'
+    end
   end
 end
