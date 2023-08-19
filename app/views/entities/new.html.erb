@@ -1,3 +1,12 @@
-<div>
+   <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= link_to user_groups_path, type: 'button' do %>
+      <%= image_tag('arrow-left.svg', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">CREATE TRANSACTION</h2>
+    <%= link_to destroy_user_session_path, type: 'button' do %>
+    <% image_tag('box-arrow-right.svg', :size => "23x23", :class => "left-arrow")%>
+    <% end %>
+  </nav>
+<div class= 'container entities-form'>
 <%= render "form", entity: @entity %>
 </div>

@@ -1,15 +1,15 @@
    <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
-    <%= link_to unauthenticated_root_path, type: 'button' do %>
-      <%= image_tag('hamburger.png', :size => "23x23", :class => "left-arrow") %>
+    <%= link_to user_groups_path, type: 'button' do %>
+      <%= image_tag('arrow-left.svg', :size => "23x23", :class => "left-arrow") %>
     <% end %>
-    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6"><%= @group.name.upcase%></h2>
+    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">DETAILS</h2>
     <%= link_to destroy_user_session_path, type: 'button' do %>
     <% image_tag('box-arrow-right.svg', :size => "23x23", :class => "left-arrow")%>
     <% end %>
   </nav>
   <div class = 'container'>
 <%= render @group %>
-<div>
+<div class ="no-transaction">
 <h4>Transactions</h4>
   <% if @entities.empty? %>
     <p>No transactions available.</p>
@@ -28,7 +28,7 @@
 </div>
 
 
-<div class="btn">
-  <%= link_to "Add transaction", new_user_entity_path(current_user) %>
+<div class="add-category-btn">
+  <%= link_to "Add transaction", new_user_entity_path(current_user), class: 'btn' %>
 </div>
   </div>
