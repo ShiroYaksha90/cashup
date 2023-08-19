@@ -1,9 +1,11 @@
 databases:
   - name: postgres
-  IpAllowList: []
+    databaseName: postgres
+    user: v
+
 services:
   - type: web
-    name: rails
+    name: postgres
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
