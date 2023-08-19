@@ -1,7 +1,7 @@
 databases:
   - name: postgres
     databaseName: postgres
-    user: v
+    user: postgres
 
 services:
   - type: web
