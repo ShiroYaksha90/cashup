@@ -44,7 +44,7 @@ Cashup is a web-based budget app built using Ruby on Rails and PostgreSQL. With 
 
 ### 🚀 Live Demo <a name="live-demo"></a>
 
-<a href="" target="_blank">Cashup</a>
+<a href="https://cashup.onrender.com/" target="_blank">Cashup</a>
 ### 📽️ Video Presentation <a name="video"></a>
 
 [Video Presentation ](https://www.loom.com/share/b5ba666c53154c899d321a68e45eceb2)
