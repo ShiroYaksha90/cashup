@@ -3,24 +3,11 @@ require 'rails_helper'
 RSpec.feature 'Groups', type: :system do
   include Devise::Test::IntegrationHelpers
   before do
-    @user = User.create(
-      name: 'Basim',
-      email: 'user@example.com',
-      password: 'password'
-    )
+    @user = User.create(name: 'Basim', email: 'user@example.com', password: 'password')
     sign_in @user
     @group =
-      Group.create(
-        name: 'Food',
-        icon: 'www.foodimg.com',
-        author: @user
-      )
-    @entity =
-      Entity.create(
-        name: 'Stake',
-        amount: 25,
-        author: @user
-      )
+      Group.create(name: 'Food', icon: 'www.foodimg.com', author: @user)
+    @entity = Entity.create(name: 'Stake', amount: 25, author: @user)
     @group.entities << @entity
   end
 
