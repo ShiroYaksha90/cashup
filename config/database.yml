@@ -85,6 +85,6 @@ test:
 production:
   <<: *default
   database: cashup_production
-  url: <%= ENV["CASHUP_DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
   username: cashup
   password: <%= ENV["CASHUP_DATABASE_PASSWORD"] %>
