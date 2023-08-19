@@ -1,0 +1,35 @@
+<li class = 'container' >
+  <div class = "details-container">
+    <div class = 'category-details-container'>
+    <%= link_to  user_group_path( current_user, group) do %>
+      <% def valid_image_url?(url) %>
+        <% url.present? && url =~ /\Ahttps?:\/\/\S+\z/ %>
+      <% end %>
+      <% if valid_image_url?(group.icon) %>
+        <%= image_tag group.icon, alt: 'My Image' %>
+      <% else %>
+        <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJcT7PQqrhP-fcTi2K3UTvx1CZMmLvFPvupUZivUCJMFDRsX4LxhTRuenl5VHpbhs7elI&usqp=CAU', alt: 'My Image' %>
+      <% end %>
+    <% end %>
+      <div class = 'category-title-date-container'>
+    <p id = 'title'><%= link_to  group.name.capitalize, user_group_path( current_user, group) %></p>
+    <p id = 'date'><%=  group.created_at.strftime("%d %b %Y") %></p>
+  </div>
+  </div>
+
+  <div class = 'amount'>
+    <p>$<%= group.entities.sum(:amount)%></p>
+  </div>
+  </div>
+   <div class= 'delete-btn-container' >
+    <% if can? :destroy, group %>
+      <%= button_to  user_group_path(current_user, group),
+        method: :delete,
+        data: { confirm: 'Are you sure you want to delete this group?' },
+        title: "Delete #{group.name.capitalize} group" do %>
+        <%= image_tag('trash3.svg', :size => "23x23", :class => "add-category-btn ") %>
+      <% end %>
+    <% end %>
+    
+  </div>
+</li>

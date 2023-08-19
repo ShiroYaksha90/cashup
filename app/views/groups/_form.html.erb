@@ -1,0 +1,12 @@
+
+<%= form_with(model: group, url: user_groups_path) do |form| %>
+  <div class="form-container">
+    <div class='form-input-container'>
+      <%= form.text_field :name, autofocus: true,  placeholder: "Name", required: true  %>
+      <%= form.text_field :icon, placeholder: "Icon URL", required: true  %>
+    </div>
+      <div class="form-btn">
+    <%= form.submit %>
+  </div>
+  </div>
+<% end %>
