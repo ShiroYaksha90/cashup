@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Entity, type: :model do
-  user = User.first
+  user = User.create(name: 'Basim', email: 'aljazaeribasim@gmail.com', password: '123123',
+  password_confirmation: '123123')
   e = Entity.new(name: 'test', amount: 100, author_id: user.id)
 
   it 'check it has a name' do
