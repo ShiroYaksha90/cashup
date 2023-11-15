@@ -1,0 +1,23 @@
+   <div class = 'splash-login'>
+   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+   <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= link_to unauthenticated_root_path, type: 'button' do %>
+      <%= image_tag('arrow-left.svg', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="category-title font-proxima-light fw-bold my-0 text-white fs-6">LOGIN</h2>
+     <%= f.submit "Log in", class: 'action text-white' %>
+  </nav>
+
+<div class = 'log-in'>
+    <%= f.email_field :email, class:"form-control", autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+    <%= f.password_field :password, autocomplete: "current-password", class:"form-control", placeholder: 'Password'  %>
+<% end %>
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+<div id = 'forgot'>
+  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+<% end %>
+</div>
+</div>
+
+</div>
+

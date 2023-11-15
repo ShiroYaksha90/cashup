@@ -1,0 +1,33 @@
+   <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= link_to unauthenticated_root_path, type: 'button' do %>
+      <%= image_tag('hamburger.png', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">TRANSACTIONS</h2>
+    <%= link_to destroy_user_session_path, type: 'button' do %>
+    <% image_tag('box-arrow-right.svg', :size => "23x23", :class => "left-arrow")%>
+    <% end %>
+  </nav>
+<div class="container">
+   
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "alert" %>
+  <% end -%>
+<div class="total">
+  <p class = 'total-title'>Total amount:</p>
+  <p>$<%= Group.total_amount(current_user.id) %></p>
+</div>
+
+<% if @groups.any? %>
+  <div id="groups">
+    <% @groups.each do |group| %>
+      <ul><%= render group %></ul>
+    <% end %>
+  </div>
+<% end %>
+
+
+<div class="add-category-btn">
+  <%= link_to "Add new category", new_user_group_path(current_user), class: 'btn' %>
+</div>
+
+</div>
